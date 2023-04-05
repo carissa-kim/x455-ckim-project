@@ -589,6 +589,10 @@ img.main {
         cursor: pointer;
         margin-bottom: 100px;
     }
+    .box:click {
+        flex: 7;
+        height: 700px;
+    }
     .project_link {
         display: block;
         float: right;
