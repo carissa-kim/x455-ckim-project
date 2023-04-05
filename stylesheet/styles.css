@@ -144,7 +144,7 @@ hr {
         font-size: 14pt;
     }
 }
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     body {
         padding: 0;
         margin: 0;
@@ -296,7 +296,7 @@ a.logo {
         text-decoration: none;
     }
 }
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     .flexcontainer {
         display: block;
         width: 100%;
@@ -371,13 +371,8 @@ img.main {
         height: 1000px;
         background-position: 120% 150%;
     }
-    img.main {
-        width: 600px;
-        height: 350px;
-        border: 10px ridge #011638;
-    }
 }
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     a.splash {
         width: 1000px;
         height: 1000px;
@@ -442,7 +437,7 @@ img.main {
     color: #ffffff;
 }
 @media screen and (max-width: 800px) and (min-width: 650px) {}
-@media screen and (max-width: 650px) and (min-width: 300px) {}
+@media screen and (max-width: 650px) and (min-width: 200px) {}
 
 /*Footer*/
 .footer {
@@ -481,7 +476,7 @@ img.main {
     line-height: 1;
 }
 @media screen and (max-width: 800px) and (min-width: 650px) {}
-@media screen and (max-width: 650px) and (min-width: 300px) {}
+@media screen and (max-width: 650px) and (min-width: 200px) {}
 
 /*Portfolio-Main carousel*/
 .carousel {
@@ -577,7 +572,7 @@ img.main {
         padding: 10px;
     }
 }
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     .carousel {
         max-width: 990px;
         background: rgba(0, 0, 0, 0.10);
@@ -589,7 +584,7 @@ img.main {
         cursor: pointer;
         margin-bottom: 100px;
     }
-    .box:click {
+    .a1, .a2, .a3, .a4, .a5:click {
         flex: 7;
         height: 700px;
     }
@@ -654,7 +649,7 @@ img.main {
         padding: 10px;
     }
 }
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     .projectnav {
         width: 100%;
         height: 50px;
@@ -748,7 +743,7 @@ img.main {
   to {opacity: 1}
 }
 @media screen and (max-width: 800px) and (min-width: 650px) {}
-@media screen and (max-width: 650px) and (min-width: 300px) {}
+@media screen and (max-width: 650px) and (min-width: 200px) {}
 
 .accordion {
     border: 1px solid black;
@@ -780,7 +775,7 @@ img.main {
     padding: 0;
 }
 @media screen and (max-width: 800px) and (min-width: 650px) {}
-@media screen and (max-width: 650px) and (min-width: 300px) {
+@media screen and (max-width: 650px) and (min-width: 200px) {
     .accordion {
         height: 25px;
         box-shadow: none;
