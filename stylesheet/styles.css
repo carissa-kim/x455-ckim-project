@@ -306,7 +306,7 @@ a.logo {
         height: 50px;
         padding: 0px;
     }
-    .flexcontainer a {
+    .flexcontainer a, .portfolio {
         border-radius: 0px;
         padding: 10px 0px;
         width: 100%;
