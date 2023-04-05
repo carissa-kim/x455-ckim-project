@@ -1,0 +1,487 @@
+/*ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  background-color: none;
+}*/
+
+html {
+  height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: auto pro new, sans-serif;
+  font-weight: 400;
+  font-style:  normal;
+  font-size: 16px;
+  color: #011638;
+  background: white;
+}
+
+p {
+  display: none;
+}
+
+.flexcontainer a, .portfolio {
+  display: block;
+  position: none;
+  border-radius: 10px;
+  background-color: #e8dcc8;
+  color: #011638;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 15px;
+  width: 100px;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  height: 100px;
+  background-color: #b0d9cf;
+  position: fixed;
+  padding-top: 20px;
+  right: 0px;
+  z-index: 1;
+}
+
+.flexcontainer a:hover:not(.active) {
+  background-color: #c0b4a0;
+  color: white;
+}
+
+.active {
+  font-style: italic;
+}
+
+/*.dropdown-content a {
+  display: block;
+  position: none;
+  border-radius: 10px;
+  background-color: #e8dcc8;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 5px;
+  width: 80px;
+}
+
+.dropdown-content li:hover {
+background-color: none;
+text-decoration: underline;
+}
+
+.dropdown-content {
+display: block;
+position: none;
+padding: 10px 10px 0px 0px;
+margin-top: 50px;
+background-color: #e8dcc8;
+text-decoration: none;
+max-width: 80px;
+box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+z-index: 2;
+}
+
+.dropdown a:hover div.dropdown-content {
+display: block;
+top: 110px;
+
+}*/
+
+a.splash {
+  width: 1500px;
+  height: 1000px;
+  position: fixed;
+  background: url(../Images/splash\ image.png) no-repeat;
+  background-size: cover;
+  background-position: 100% 250%;
+  z-index: -2;
+}
+
+a.logo {
+  float: left;
+  width: 65px;
+  height: 65px;
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 40px;
+  padding: 20px;
+  background: url(../Images/WebsiteLogo.png) no-repeat 0 0;
+  background-size: contain;
+  z-index: 2;
+}
+
+a.homelogo {
+  float: left;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 250px;
+  left: 250px;
+  padding: 20px;
+  background: url(../Images/WebsiteLogo.png) no-repeat 0 0;
+  background-size: contain;
+  z-index: -2;
+}
+
+.social-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background-color: #c0b4a0;
+  width: 25px;
+  height: 150px;
+  padding: 5px;
+  margin: 0px;
+  position: fixed;
+  top: 500px;
+  right: 0px;
+  z-index: 3;
+}
+
+.social-container #linkedin {
+  display: block;
+  position: none;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(./Images/LinkedIn.png) no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.social-container #instagram {
+  display: block;
+  position: none;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(./Images/Instagram.png) no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.social-container #facebook {
+  display: block;
+  position: none;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(./Images/Facebook.png) no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.social-container #youtube {
+  display: block;
+  position: none;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(./Images/Youtube.png) no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.footer {
+  display: block;
+  position: relative;
+  background: #b0d9cf;
+  color: #011638;
+  text-align: center;
+  z-index: 0;
+  height: 30px; 
+  width: 100%;
+  padding: 10px;
+  font-family: auto-pro-new, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+.footer-home {
+  display: block;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  scroll-margin: auto;
+  background: #b0d9cf;
+  color: #c0b4a0;
+  text-align: center;
+  z-index: 0;
+  height: 100px; 
+  width: 100%; 
+  padding: 0px;
+  font-family: auto-pro-new, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+/*
+#linkedin {
+  display: block;
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+  left: 43%;
+  width: 30px;
+  height: 30px;
+  background: url(../Images/LinkedIn.png) no-repeat;
+  background-size: contain;
+}
+
+#instagram {
+  display: block;
+  position: absolute;
+  top: auto;
+  bottom: 9px;
+  left: 47%;
+  width: 30px;
+  height: 30px;
+  background: url(../Images/Instagram.png) no-repeat;
+  background-size: contain;
+}
+
+#facebook {
+  display: block;
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+  left: 52%;
+  width: 30px;
+  height: 30px;
+  background: url(../Images/Facebook.png) no-repeat;
+  background-size: contain;
+}
+
+#youtube {
+  display: block;
+  position: absolute;
+  top: auto;
+  bottom: 5px;
+  left: 55%;
+  width: 35px;
+  height: 30px;
+  background: url(../Images/Youtube.png) no-repeat;
+  background-size: contain;
+}
+*/
+
+
+@media screen and (max-width: 750px) {
+  .flexcontainer > div > a {
+      font-size: 12pt; 
+      width: 75%;
+      height: 50%;
+  }
+  a.homelogo {
+      float: left;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      top: 200px;
+      left: 100px;
+      padding: 20px;
+      background: url(../Images/WebsiteLogo.png) no-repeat 0 0;
+      background-size: contain;
+      z-index: -2;
+  }
+
+  h1 {
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 37.5px;
+  }
+  
+  h2 {
+      font-size: 27px;
+  }
+  
+  h3 {
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18px;
+  }
+  
+  h4 {
+      font-size: 13.5px;
+  }
+  
+  h5{
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 10pt;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flexcontainer > div >a {
+      font-size: 10pt;
+      width: 75%;
+      height: 15%;
+      padding-bottom: 20px;
+  }
+
+  a.homelogo {
+      float: left;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      top: 150px;
+      left: 50px;
+      padding: 20px;
+      background: url(../Images/WebsiteLogo.png) no-repeat 0 0;
+      background-size: contain;
+      z-index: -2;
+  }
+/*
+  #linkedin {
+      display: block;
+      position: absolute;
+      top: auto;
+      bottom: 10px;
+      left: 35%;
+      width: 20px;
+      height: 20px;
+      background: url(../Images/LinkedIn.png) no-repeat;
+      background-size: contain;
+  }
+  
+  #instagram {
+      display: block;
+      position: absolute;
+      top: auto;
+      bottom: 9px;
+      left: 43%;
+      width: 20px;
+      height: 20px;
+      background: url(../Images/Instagram.png) no-repeat;
+      background-size: contain;
+  }
+  
+  #facebook {
+      display: block;
+      position: absolute;
+      top: auto;
+      bottom: 10px;
+      left: 52%;
+      width: 20px;
+      height: 20px;
+      background: url(../Images/Facebook.png) no-repeat;
+      background-size: contain;
+  }
+  
+  #youtube {
+      display: block;
+      position: absolute;
+      top: auto;
+      bottom: 5px;
+      left: 58%;
+      width: 25px;
+      height: 22px;
+      background: url(../Images/Youtube.png) no-repeat;
+      background-size: contain;
+  }
+*/
+  h1 {
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 20px;
+  }
+  
+  h2 {
+      font-size: 18px;
+  }
+  
+  h3 {
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 12px;
+  }
+  
+  h4 {
+      font-size: 9px;
+  }
+  
+  h5{
+      font-family: alga, serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 8pt;
+  }
+}
+
+h1 {
+  width: 350px;
+  font-family: alga, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  margin: 150px auto 20px auto;
+}
+
+h2 {
+  font-family: alga, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: alga, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: auto-pro-new, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+h5{
+  font-family: alga, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12pt;
+}
+
+h6 {
+  font-family: auto-pro-new, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+}
+
+
+/* 
+coral = #EF798A 
+blue = #2A3278
+dark blue = #011638
+*/

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./stylesheet/styles.css"/>
+  <link rel="stylesheet" href="https://use.typekit.net/ovg4cfo.css"/>
+  <script src="https://kit.fontawesome.com/6726623f7b.js" crossorigin="anonymous"></script>
+  <title>Contact</title>
+</head>
+
+<header>
+  <nav class="flexcontainer" style="font-family: alga, serif; font-weight: 600; font-style: normal; font-size: 16pt;">
+    <div><a href="Profile.html" >Profile</a></div>
+    <div class="dropdown">
+      <a href="Portfolio-Main.html" class="portfolio">Portfolio</a>
+      <div class="dropdown-content">
+        <a href="Portfolio-Project-1.html" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">Project 1</a>
+        <a href="Portfolio-Project-2.html">Project 2</a>
+        <a href="Portfolio-Project-3.html" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">Project 3</a>
+      </div>
+    </div>
+    <div><a href="Gallery.html">Gallery</a></div>
+    <div><a href="Contact.html" class="active">Contact</a></div>
+  </nav>
+  
+  <div>
+    <img/> <a class="logo" alt="CK Creatively Logo" href="Index.html"></a>
+  </div>
+</header>
+
+<body>
+  <h1>Contact Me!</h1>
+    <h2 style="width: 50%; margin:auto;">Please contact me about your design needs! 
+    <br>I look forward to hearing from you.</h2>
+    <img src="./Images/300ppi/Divider tanAsset 4.png" alt="tanborder" style="width: 100%; height: 30px; padding: 50px 0; opacity: 0.2; object-fit: cover;">
+    <h4 style="text-align: center; color: #EF798A;">Below you can find a list of services and timeframes.</h4>
+    <table id="table">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Service</th>
+          <th id="nosort">Description</th>
+          <th onclick="sortTable(0)">Timeframe (hours)</th>
+          <th onclick="sortTable(0)">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Website Design</td>
+            <td>Creation of Website from wireframes to prototyping. Starting at 4 pages.</td>
+            <td>40</td>
+            <td>$1500</td>
+        </tr>
+        <tr>
+            <td>3-fold Flyer</td>
+            <td>Flyer design for printing. Front and back designs.</td>
+            <td>5</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Magazine Design</td>
+            <td>10 page minimum design, including front and back covers.</td>
+            <td>30</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>Book Design</td>
+            <td>Front graphic included.</td>
+            <td>20</td>
+            <td>$750</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h4 style="text-align: center; color: #EF798A;">Browse my instagram or facebook for more information. 
+    <br>DM, email, or fill out the <a href="#" style="color: #b0d9cf">contact form</a> to start chatting about how we can create your design.</h4>
+  <section class="social-container">
+    <a id="linkedin" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a id="instagram" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a id="facebook" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a id="youtube" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </section>
+</body>
+
+<footer class="footer">
+    Carissa Kim Graphic Designs
+      <!--<div style="z-index: 2;">
+        <a id="linkedin" href="https://youtube.com" target="_blank"></a>
+        <a id="instagram" href="https://instagram.com" target="_blank"></a>
+        <a id="facebook" href="https://facebook.com" target="_blank"></a>
+        <a id="youtube" href="https://youtube.com" target="_blank"></a>
+      </div>-->
+</footer>
+
+<script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("table");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc"; 
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount ++;   
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+</script>
+
+</html>

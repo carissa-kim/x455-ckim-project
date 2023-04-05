@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./stylesheet/styles.css"/>
+  <link rel="stylesheet" href="https://use.typekit.net/ovg4cfo.css">
+  <script src="https://kit.fontawesome.com/6726623f7b.js" crossorigin="anonymous"></script>
+  <title>Portfolio</title>
+</head>
+
+<header>
+  <nav class="flexcontainer" style="font-family: alga, serif; font-weight: 600; font-style: normal; font-size: 16pt;">
+    <div><a href="Profile.html" >Profile</a></div>
+    <div class="dropdown">
+      <a  class="active" href="Portfolio-Main.html" class="portfolio">Portfolio</a>
+      <div class="dropdown-content">
+        <a href="Portfolio-Project-1.html" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">Project 1</a>
+        <a href="Portfolio-Project-2.html">Project 2</a>
+        <a href="Portfolio-Project-3.html" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">Project 3</a>
+      </div>
+    </div>
+    <div><a href="Gallery.html">Gallery</a></div>
+    <div><a href="Contact.html">Contact</a></div>
+  </nav>
+
+  <div>
+    <img/> <a class="logo" alt="CK Creatively Logo" href="Index.html"></a>
+  </div>
+</header>
+
+<body>
+  <h1>Portfolio</h1>
+
+  <div class="carousel">
+
+      <!-- BOX 1 -->
+      
+      <div class="box a1">
+          <div class="image_1">
+              <div class="text">
+                  <h2 style="line-height: 0;">Project 1</h2>
+                  <h2>Magazine Design</h2>
+                  <p>
+                      The goal of this project was to use grids, color themes, and parent pages to create a cohesive magazine layout using Adobe InDesign. Key concepts covered in this project include, hierarchy, typography, and color. I created a 20 page magazine highlighting various articles and stock images.
+                  </p>
+                  <a class="project_link" href="Portfolio-Project-1.html">View Full Project</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- BOX 2 -->
+      <div class="box a2">
+          <div class="image_2">
+              <div class="text">
+                  <h2>Project 2</h2>
+                  <h2>Website & Mobile Design</h2>
+                  <p>
+                      The goal of this project was to use Adobe Photoshop to apply masks, adjust color and contrast, and create composite images. Adding to a theme of the existing film, Coraline, I created a website and mobile design that would not be amiss in the film's advertising.
+                  </p>
+                  <a class="project_link" href="Portfolio-Project-2.html">View Full Project</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- BOX 3 -->
+      <div class="box a3">
+          <div class="image_3">
+              <div class="text">
+                  <h2>Project 3</h2>
+                  <h2>Advertising Campaign</h2>
+                  <p>
+                      The goal of this project was to choose a product and create a set of advertising posters with existing paintings. Using Adobe Photoshop, I incorporated the Starbucks coffee cup into three paintings and matched texture, lighting, and size.
+                  </p>
+                  <a class="project_link" href="Portfolio-Project-3.html">View Full Project</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- BOX 1 -->
+      <div class="box a4">
+          <div class="image_4">
+              <div class="text">
+                  <h2>Project 4</h2>
+                  <h2>Original Typography</h2>
+                  <p>
+                      The goal of this project was to create an original typeface. After learning the fundamentals and anatomy of typography, I created my typeface by modeling it after the idea of "disjointed".
+                  </p>
+                  <a class="project_link" href="Portfolio-Project-4.html">View Full Project</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- BOX 5 -->
+      <div class="box a5">
+          <div class="image_5">
+              <div class="text">
+                  <h2>Project 5</h2>
+                  <h2>Photo Realistic Reconstruction</h2>
+                  <p>
+                      The goal of this project was to use Adobe Illustrator to create a photorealistic illustration that can be used with a variety of mediums. Special attention was given to color, gradients, and perspective to create a realistic illustration.
+                  </p>
+                  <a class="project_link" href="Portfolio-Project-5.html">View Full Project</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <section class="social-container">
+    <a id="linkedin" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a id="instagram" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a id="facebook" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a id="youtube" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </section>
+
+</body>
+
+<footer class="footer" style="bottom: -200px;">
+  Carissa Kim Graphic Designs
+    <!--<div style="z-index: 2;">
+      <a id="linkedin" href="https://youtube.com" target="_blank"></a>
+      <a id="instagram" href="https://instagram.com" target="_blank"></a>
+      <a id="facebook" href="https://facebook.com" target="_blank"></a>
+      <a id="youtube" href="https://youtube.com" target="_blank"></a>
+    </div>-->
+</footer>
+
+<script>
+const carerForm = document.getElementById('carerForm')
+console.log('carerForm', carerForm)
+
+carerForm.addEventListener('submit', function(e) {
+  alert()
+  e.preventDefault();
+
+  var action = this.attr('action')
+  console.log('action', action)
+
+  
+  $.ajax({
+  url: "https://fiddle.jshell.net/favicon.png",
+  data: {
+      name: formElements['name'].value,
+      surname:  formElementsT ['surname'].value,
+      mail:  formElementsT ['mail'].value,
+      phone:  formElements ['phone'].value,
+      vacancy:  formElements ['vacancy'].value,
+      file:  formElements ['file'].value,
+    },
+  success: function(response) {
+    console.log(response)
+  }
+})
+  
+})
+</script>
+  
+
+</html>
